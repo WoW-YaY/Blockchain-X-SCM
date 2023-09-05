@@ -53,7 +53,7 @@ export default function Home() {
               }}
             >
               <div className={classes.HomeCardWrap}>
-                <h1 className={classes.pageHeading}>Assign Roles</h1>
+                <h1 className={classes.pageHeading}>Administrator</h1>
                 <Link
                   to="/roleAdmin"
                   style={{ textDecoration: "none", color: "#fff" }}
@@ -64,7 +64,7 @@ export default function Home() {
                     variant="outlined"
                     color="primary"
                   >
-                    Assign
+                    LOGIN
                   </Button>
                 </Link>
                 <br />

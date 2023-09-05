@@ -8,7 +8,7 @@ const mapStyles = {
   // maxWidth:"400px",
   height: "350px",
   zIndex: "10 !important",
-  border:"2px solid #1a237e",
+  border:"2px solid #385723",//#1a237e",
 };
 
 export class MapContainer extends Component {

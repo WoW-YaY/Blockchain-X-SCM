@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "#09126d",
+    backgroundColor: "#367721",
     color: "#fff",
   },
   drawerHeader: {
@@ -116,10 +116,10 @@ export default function PersistentDrawerLeft({ pageTitle,navItems, children }) {
           >
             <img
               alt="."
-              src="/logo.png"
+              src="/hku.png"
               style={{ height: "45px", width: "auto" }}
             />
-            &nbsp;SupplyChain-Dapp
+            &nbsp;Blockchain-X-SCM
           </Typography>
         </Toolbar>
       </AppBar>
@@ -188,7 +188,7 @@ export default function PersistentDrawerLeft({ pageTitle,navItems, children }) {
               borderTop: "1px solid #44a",
             }}
           >
-            By Team Akatsuki &nbsp;&nbsp;
+            Reference: &nbsp;&nbsp;
             <a
               style={{ textDecoration: "none" }}
               href="https://github.com/rishav4101/eth-supplychain-dapp"
