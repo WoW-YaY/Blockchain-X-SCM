@@ -26,7 +26,7 @@ Option 2: Compile the contracts on the public (test) chain
 truffle migrate --network=mumbai --reset
 ```
 
-### Step 2: Open the client to do interaction
+### Step 2: Open the client to do an interaction
 
 Open a new terminal, run:
 
@@ -35,5 +35,5 @@ cd client
 ```
 
 ```
-npm i
+npm start
 ```
