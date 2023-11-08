@@ -35,5 +35,10 @@ cd client
 ```
 
 ```
+if not install npm i
+run npm i
+```
+
+```
 npm start
 ```
