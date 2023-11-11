@@ -112,7 +112,7 @@ export default function ReceiveThirdParty(props) {
 
   return (
     <div classname={classes.pageWrap}>
-      <Navbar pageTitle={"Third Party"} navItems={navItem}>
+      <Navbar pageTitle={"Distributor"} navItems={navItem}>
         {loading ? (
           <Loader />
         ) : (

@@ -7,7 +7,7 @@ export const RoleDataContextProvider = ({ mRole, tpRole, dhRole, cRole, children
 
     const [roles, setRoles] = useState({
         manufacturer : mRole,
-        thirdparty : tpRole,
+        Distributor : tpRole,
         deliveryhub : dhRole,
         customer : cRole
     });

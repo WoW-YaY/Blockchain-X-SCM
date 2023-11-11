@@ -101,12 +101,12 @@ class App extends Component {
             <Route exact path="/ThirdParty/allProducts">
             {this.state.tpRole !== "" ?
               <PurchaseThirdParty accounts={this.state.accounts} supplyChainContract={this.state.contract} />
-              : <h1>Assign Third Party Role at /RoleAdmin</h1> }
+              : <h1>Assign Distributor Role at /RoleAdmin</h1> }
             </Route>
             <Route exact path="/ThirdParty/receive">
             {this.state.tpRole !== "" ?
               <ReceiveThirdParty accounts={this.state.accounts} supplyChainContract={this.state.contract} />
-              : <h1>Assign Third Party Role at /RoleAdmin</h1> }
+              : <h1>Assign Distributor Role at /RoleAdmin</h1> }
             </Route>
             <Route exact path="/Customer/buy">
             {this.state.cRole !== "" ?
@@ -116,17 +116,17 @@ class App extends Component {
             <Route exact path="/ThirdParty/ship">
             {this.state.tpRole !== "" ?
               <ShipThirdParty accounts={this.state.accounts} supplyChainContract={this.state.contract} />
-              : <h1>Assign Third Party Role at /RoleAdmin</h1> }
+              : <h1>Assign Distributor Role at /RoleAdmin</h1> }
             </Route>
             <Route exact path="/DeliveryHub/receive">
             {this.state.dhRole !== "" ?
               <ReceiveDeliveryHub accounts={this.state.accounts} supplyChainContract={this.state.contract} />
-              : <h1>Assign Delivery Hub Role at /RoleAdmin</h1> }
+              : <h1>Assign Retailer Role at /RoleAdmin</h1> }
             </Route>
             <Route exact path="/DeliveryHub/ship">
             {this.state.dhRole !== "" ?
               <ShipDeliveryHub accounts={this.state.accounts} supplyChainContract={this.state.contract} />
-              : <h1>Assign Delivery Hub Role at /RoleAdmin</h1> }
+              : <h1>Assign Retailer Role at /RoleAdmin</h1> }
             </Route>
             <Route exact path="/Customer/receive">
             {this.state.cRole !== "" ?
