@@ -119,7 +119,7 @@ export default function PersistentDrawerLeft({ pageTitle,navItems, children }) {
               src="/hku.png"
               style={{ height: "45px", width: "auto" }}
             />
-            &nbsp;Blockchain-X-SCM
+            &nbsp;HKU Souvenir Record Management
           </Typography>
         </Toolbar>
       </AppBar>
@@ -191,7 +191,7 @@ export default function PersistentDrawerLeft({ pageTitle,navItems, children }) {
             Reference: &nbsp;&nbsp;
             <a
               style={{ textDecoration: "none" }}
-              href="https://github.com/rishav4101/eth-supplychain-dapp"
+              href="https://github.com/WoW-YaY/Blockchain-X-SCM"
             >
               <GitHubIcon style={{ color: "#fff" }} />
             </a>
