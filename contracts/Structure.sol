@@ -25,6 +25,7 @@ library Structure {
         string productName;
         uint256 productCode;
         uint256 productPrice;
+        uint256 batchSize;
         string productCategory;
     }
     struct ThirdPartyDetails {

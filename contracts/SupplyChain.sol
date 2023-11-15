@@ -170,11 +170,13 @@ contract SupplyChain {
         string memory productName,
         uint256 productCode,
         uint256 productPrice,
+        uint256 batchSize,
         string memory productCategory
     ) internal pure {
         product.productdet.productName = productName;
         product.productdet.productCode = productCode;
         product.productdet.productPrice = productPrice;
+        product.productdet.batchSize = batchSize;
         product.productdet.productCategory = productCategory;
     }
 
@@ -187,6 +189,7 @@ contract SupplyChain {
         string memory productName,
         uint256 productCode,
         uint256 productPrice,
+        uint256 batchSize,
         string memory productCategory
     ) public {
         require(hasManufacturerRole(msg.sender));
@@ -212,6 +215,7 @@ contract SupplyChain {
             productName,
             productCode,
             productPrice,
+            batchSize,
             productCategory
         );
 
@@ -390,6 +394,7 @@ contract SupplyChain {
             string memory,
             uint256,
             uint256,
+            uint256,
             string memory,
             Structure.State,
             address,
@@ -409,6 +414,7 @@ contract SupplyChain {
             product.productdet.productName,
             product.productdet.productCode,
             product.productdet.productPrice,
+            product.productdet.batchSize,
             product.productdet.productCategory,
             product.productState,
             product.thirdparty.thirdParty,
