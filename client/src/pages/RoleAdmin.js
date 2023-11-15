@@ -101,7 +101,7 @@ function RoleAdmin(props) {
             onClick={handleAddManufacturerRole}
             style={{width:"30%", marginLeft:"10px"}}
           >
-            Add Manufacturer
+            Manufacturer
           </Button>
         </div>
       </form>
@@ -110,7 +110,7 @@ function RoleAdmin(props) {
         <div className={classes.RoleForm} >
           <TextField
             id="thirdPartyRole"
-            label="Enter Third Party Address "
+            label="Enter Distributor Address "
             variant="outlined"
             value={thirdPartyRole}
             onChange={(e) => setThirdPartyRole(e.target.value)}
@@ -122,7 +122,7 @@ function RoleAdmin(props) {
             onClick={handleAddThirdPartyRole}
             style={{width:"30%", marginLeft:"10px"}}
           >
-            Add third party
+            Add Distributor
           </Button>
         </div>
       </form>
@@ -131,7 +131,7 @@ function RoleAdmin(props) {
         <div className={classes.RoleForm} >
           <TextField
             id="deliveryHubRole"
-            label="Enter Delivery Hub Address"
+            label="Enter Retailer Address"
             variant="outlined"
             value={deliveryHubRole}
             onChange={(e) => setDeliveryHubRole(e.target.value)}
@@ -143,7 +143,7 @@ function RoleAdmin(props) {
             onClick={handleAddDeliveryHubRole}
             style={{width:"30%", marginLeft:"10px"}}
           >
-            add delivery hub
+            add Retailer
           </Button>
         </div>
       </form>

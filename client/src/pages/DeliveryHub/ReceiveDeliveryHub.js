@@ -109,7 +109,7 @@ export default function ReceiveDeliveryHub(props) {
 
   return (
     <div classname={classes.pageWrap}>
-      <Navbar pageTitle={"Delivery Hub"} navItems={navItem}>
+      <Navbar pageTitle={"Retailer"} navItems={navItem}>
         {loading ? (
           <Loader />
         ) : (

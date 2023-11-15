@@ -93,7 +93,7 @@ export default function Home() {
                     variant="outlined"
                     color="primary"
                   >
-                    Third party
+                    Distributor
                   </Button>
                 </Link>
                 <Link
@@ -106,7 +106,7 @@ export default function Home() {
                     variant="outlined"
                     color="primary"
                   >
-                    delivery hub
+                    Retailer
                   </Button>
                 </Link>
                 <Link
@@ -119,7 +119,7 @@ export default function Home() {
                     variant="outlined"
                     color="primary"
                   >
-                    customer
+                    Customer
                   </Button>
                 </Link>
               </div>
