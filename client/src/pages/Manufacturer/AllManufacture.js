@@ -134,6 +134,12 @@ export default function AllManufacture(props) {
                             Product Name
                           </TableCell>
                           <TableCell
+                            className={classes.TableHead}
+                            align="center"
+                          >
+                            Batch Size
+                          </TableCell>
+                          <TableCell
                             className={clsx(
                               classes.TableHead,
                               classes.AddressCell
@@ -189,6 +195,12 @@ export default function AllManufacture(props) {
                                     align="center"
                                   >
                                     {prod[1][1]}
+                                  </TableCell>
+                                  <TableCell
+                                    className={classes.TableCell}
+                                    align="center"
+                                  >
+                                    {prod[1][4]}
                                   </TableCell>
                                   <TableCell
                                     className={clsx(

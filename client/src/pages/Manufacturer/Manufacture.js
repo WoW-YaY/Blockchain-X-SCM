@@ -27,6 +27,7 @@ export default function Manufacture(props) {
         productName: "",
         productCode: 0,
         productPrice: 0,
+        batchSize: 0,
         productCategory: "",
     });
 
@@ -40,9 +41,9 @@ export default function Manufacture(props) {
     const handleSubmitManufacturerForm = async () => {
         setLoading(true);
         
-        if (manuForm.manufacturerName !== "" && manuForm.manufacturerDetails !== "" && manuForm.manufacturerLongitude !== "" && manuForm.manufacturerLatitude !== "" && manuForm.productName !== "" && manuForm.productCode !== 0 && manuForm.productPrice !== 0 && manuForm.productCategory !== "") {
+        if (manuForm.manufacturerName !== "" && manuForm.manufacturerDetails !== "" && manuForm.manufacturerLongitude !== "" && manuForm.manufacturerLatitude !== "" && manuForm.productName !== "" && manuForm.productCode !== 0 && manuForm.productPrice !== 0 && manuForm.batchSize !== 0 && manuForm.productCategory !== "") {
             setfvalid(false);
-            await supplyChainContract.methods.manufactureProduct(manuForm.manufacturerName, manuForm.manufacturerDetails, manuForm.manufacturerLongitude, manuForm.manufacturerLatitude, manuForm.productName, parseInt(manuForm.productCode), parseInt(manuForm.productPrice), manuForm.productCategory).send({ from: roles.manufacturer, gas: 999999 })
+            await supplyChainContract.methods.manufactureProduct(manuForm.manufacturerName, manuForm.manufacturerDetails, manuForm.manufacturerLongitude, manuForm.manufacturerLatitude, manuForm.productName, parseInt(manuForm.productCode), parseInt(manuForm.productPrice), parseInt(manuForm.batchSize), manuForm.productCategory).send({ from: roles.manufacturer, gas: 999999 })
                 // .then(console.log)
                 .on('transactionHash', function (hash) {
                     handleSetTxhash(hash);
@@ -56,6 +57,7 @@ export default function Manufacture(props) {
                     productName: "",
                     productCode: 0,
                     productPrice: 0,
+                    batchSize: 0,
                     productCategory: "",
                 })
         } else {
@@ -82,6 +84,7 @@ export default function Manufacture(props) {
                     "mi" + i,
                     99 + i,
                     12000,
+                    100,
                     "electronics"
                 )
                 .send({ from: roles.manufacturer, gas: 999999 })
@@ -102,7 +105,7 @@ export default function Manufacture(props) {
                         <div className={classes.FormWrap}>
                             <h1 className={classes.pageHeading}>Add Product</h1>
                             <Grid container spacing={3}>
-                                <Grid item xs={12}>
+                                <Grid item xs={6}>
                                     <TextField
                                         required
                                         name="manufacturerName"
@@ -113,7 +116,7 @@ export default function Manufacture(props) {
                                         style={{ width: "100%" }}
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={6}>
                                     <TextField
                                         required
                                         name="manufacturerDetails"
@@ -146,7 +149,7 @@ export default function Manufacture(props) {
                                         style={{ width: "100%" }}
                                     />
                                 </Grid>
-                                <Grid item xs={12}>
+                                <Grid item xs={6}>
                                     <TextField
                                         required
                                         name="productName"
@@ -154,6 +157,17 @@ export default function Manufacture(props) {
                                         value={manuForm.productName}
                                         onChange={handleChangeManufacturerForm}
                                         label="Product Name"
+                                        style={{ width: "100%" }}
+                                    />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <TextField
+                                        required
+                                        name="productCategory"
+                                        variant="outlined"
+                                        value={manuForm.productCategory}
+                                        onChange={handleChangeManufacturerForm}
+                                        label="Product Category"
                                         style={{ width: "100%" }}
                                     />
                                 </Grid>
@@ -182,11 +196,11 @@ export default function Manufacture(props) {
                                 <Grid item xs={12}>
                                     <TextField
                                         required
-                                        name="productCategory"
+                                        name="batchSize"
                                         variant="outlined"
-                                        value={manuForm.productCategory}
+                                        value={manuForm.batchSize}
                                         onChange={handleChangeManufacturerForm}
-                                        label="Product Category"
+                                        label="Batch Size"
                                         style={{ width: "100%" }}
                                     />
                                 </Grid>

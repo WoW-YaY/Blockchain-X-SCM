@@ -146,7 +146,7 @@ export default function Explorer(props) {
                           Universal ID : {productData[0][0]}
                         </div>
                         <div className={classes.ExplorerdRow}>
-                          SKU : {productData[0][1]}
+                          Batch Size : {productData[1][4]}
                         </div>
                         <div className={classes.ExplorerdRow}>
                           Owner : {productData[0][2]}

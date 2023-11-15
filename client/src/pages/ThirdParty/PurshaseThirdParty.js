@@ -140,6 +140,12 @@ export default function PurchaseThirdParty(props) {
                           Product Name
                         </TableCell>
                         <TableCell
+                            className={classes.TableHead}
+                            align="center"
+                          >
+                            Batch Size
+                          </TableCell>
+                        <TableCell
                           className={clsx(
                             classes.TableHead,
                             classes.AddressCell
@@ -208,6 +214,13 @@ export default function PurchaseThirdParty(props) {
                                     onClick={() => handleClick(prod)}
                                   >
                                     {prod[1][1]}
+                                  </TableCell>
+                                  <TableCell
+                                    className={classes.TableCell}
+                                    align="center"
+                                    onClick={() => handleClick(prod)}
+                                  >
+                                    {prod[1][4]}
                                   </TableCell>
                                   <TableCell
                                     className={clsx(

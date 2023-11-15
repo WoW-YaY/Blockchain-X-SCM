@@ -53,10 +53,6 @@ export default function ProductModal({
                     <div className={classes.dCol2}>{prod[0][0]}</div>
                   </div>
                   <div className={classes.dRow}>
-                    <div className={classes.dCol1}>SKU:</div>{" "}
-                    <div className={classes.dCol2}> {prod[0][1]}</div>
-                  </div>
-                  <div className={classes.dRow}>
                     <div className={classes.dCol1}>Owner: </div>{" "}
                     <div className={classes.dCol2}>{prod[0][2]}</div>
                   </div>
@@ -111,22 +107,25 @@ export default function ProductModal({
                     <div className={classes.dCol1}>Product Price: </div>{" "}
                     <div className={classes.dCol2}>{prod[1][3]}</div>
                   </div>
-
                   <div className={classes.dRow}>
-                    <div className={classes.dCol1}> Product Category: </div>
+                    <div className={classes.dCol1}> Batch Size: </div>
                     <div className={classes.dCol2}>{prod[1][4]}</div>
                   </div>
                   <div className={classes.dRow}>
-                    <div className={classes.dCol1}>Product State: </div>{" "}
+                    <div className={classes.dCol1}> Product Category: </div>
                     <div className={classes.dCol2}>{prod[1][5]}</div>
                   </div>
                   <div className={classes.dRow}>
-                    <div className={classes.dCol1}>Third Party Address: </div>{" "}
+                    <div className={classes.dCol1}>Product State: </div>{" "}
                     <div className={classes.dCol2}>{prod[1][6]}</div>
                   </div>
                   <div className={classes.dRow}>
-                    <div className={classes.dCol1}>Third Party Longitude: </div>{" "}
+                    <div className={classes.dCol1}>Third Party Address: </div>{" "}
                     <div className={classes.dCol2}>{prod[1][7]}</div>
+                  </div>
+                  <div className={classes.dRow}>
+                    <div className={classes.dCol1}>Third Party Longitude: </div>{" "}
+                    <div className={classes.dCol2}>{prod[1][8]}</div>
                   </div>
                   <div className={classes.dRow}>
                     <div className={classes.dCol1}>Third Party Latitude: </div>{" "}
@@ -163,7 +162,7 @@ export default function ProductModal({
                   <br />
                   {console.log(handleReceiveButton)}
                   {handleReceiveButton ? (
-                    prod[1][5] === "2" || prod[1][5] === "5" ? (
+                    prod[1][6] === "2" || prod[1][6] === "5" ? (
                       <>
                         <TextField
                           name="long"
@@ -188,9 +187,9 @@ export default function ProductModal({
                     <> </>
                   )}
                   {handleReceiveButton ? (
-                    prod[1][5] === "2" ||
-                    prod[1][5] === "5" ||
-                    prod[1][5] === "7" ? (
+                    prod[1][6] === "2" ||
+                    prod[1][6] === "5" ||
+                    prod[1][6] === "7" ? (
                       <>
                         <Button
                           type="submit"
