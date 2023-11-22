@@ -284,7 +284,7 @@ contract SupplyChain {
         emit PurchasedByCustomer(_uid);
     }
 
-    ///@dev STEP 7 : Shipping of product by third party purchased by customer.
+    ///@dev STEP 6 : Shipping of product by third party purchased by customer.
     function shipByThirdParty(uint256 _uid)
         public
         verifyAddress(products[_uid].owner)
@@ -297,7 +297,7 @@ contract SupplyChain {
         emit ShippedByThirdParty(_uid);
     }
 
-    ///@dev STEP 8 : Receiveing of product by delivery hub purchased by customer.
+    ///@dev STEP 7 : Receiveing of product by delivery hub purchased by customer.
     function receiveByDeliveryHub(
         uint256 _uid,
         string memory deliveryHubLongitude,
@@ -314,7 +314,7 @@ contract SupplyChain {
         emit ReceivedByDeliveryHub(_uid);
     }
 
-    ///@dev STEP 9 : Shipping of product by delivery hub purchased by customer.
+    ///@dev STEP 8 : Shipping of product by delivery hub purchased by customer.
     function shipByDeliveryHub(uint256 _uid)
         public
         receivedByDeliveryHub(_uid)
@@ -328,7 +328,7 @@ contract SupplyChain {
         emit ShippedByDeliveryHub(_uid);
     }
 
-    ///@dev STEP 10 : Shipping of product by delivery hub purchased by customer.
+    ///@dev STEP 9 : Receiveing of product by customer.
     function receiveByCustomer(uint256 _uid)
         public
         shippedByDeliveryHub(_uid)
